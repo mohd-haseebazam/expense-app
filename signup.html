@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link href="signup.css" rel="stylesheet" />
+    <script src="signup.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <!-- login Container -->
+      <div class="visible" id="loginForm">
+        <!--email alert-->
+        <div
+          class="alert alert-danger emailErrorLogin"
+          role="alert"
+          style="width: 210px; position: absolute"
+        >
+          Error! Enter a email
+        </div>
+        <div
+          class="alert alert-danger emailErrorLogin"
+          role="alert"
+          style="width: 424px; position: absolute"
+        >
+          Error! Email must contain at least special characters @
+        </div>
+
+        <!-- password alert -->
+        <div
+          class="alert alert-danger passwordErrorLogin"
+          role="alert"
+          style="width: 210px; position: absolute"
+        >
+          Error! Enter a password
+        </div>
+        <div
+          class="alert alert-danger passwordErrorLogin"
+          role="alert"
+          style="width: 362px; position: absolute"
+        >
+          Error! Password must contain at least 8 letters
+        </div>
+        <div
+          class="container d-flex justify-content-center align-items-center min-vh-100"
+        >
+          <!-- login form starts -->
+          <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <!-- Right Box -->
+            <div
+              class="col-md-6 right-box rounded-4"
+              style="background: #494cf3"
+            >
+              <div class="row align-items-center">
+                <div class="header-text mb-4">
+                  <h3 class="heading">LOGIN FORM</h3>
+                </div>
+                <div class="form-group mb-5">
+                  <input
+                    type="text"
+                    id="emailLogin"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Email address"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="password"
+                    id="passwordLogin"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="mb-3" style="color: #ffffff">
+                  Don't you have an account ? click here to
+                  <a href="#" id="anchorOne" onclick="loginSign(event)"
+                    >Sign up</a
+                  >
+                </div>
+                <div class="form-group mb-3">
+                  <button
+                    class="btn btn-lg btn-light w-100"
+                    onclick="loginFormSign(event)"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Left Box -->
+
+            <div
+              class="col-md-6 rounded-4 d-flex align-items-center flex-column left-box"
+            >
+              <div class="featured-image mb-3 img">
+                <img
+                  src="images/sign.jpg"
+                  class="img-fluid"
+                  style="width: 450px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- signup Container -->
+      <div class="hidden" id="signUpForm">
+        <!--username alert-->
+        <div
+          class="alert alert-danger nameErrorSign"
+          style="width: 210px; position: absolute"
+          role="alert"
+        >
+          Error! Enter a username
+        </div>
+        <div
+          class="alert alert-danger nameErrorSign"
+          style="width: 391px; position: absolute"
+          role="alert"
+        >
+          Error! Usename must contain at least 3 characters
+        </div>
+
+        <!--email alert-->
+        <div
+          class="alert alert-danger emailErrorSign"
+          style="width: 210px; position: absolute"
+          role="alert"
+        >
+          Error! Enter a email
+        </div>
+        <div
+          class="alert alert-danger emailErrorSign"
+          style="width: 424px; position: absolute"
+          role="alert"
+        >
+          Error! Email must contain at least special characters @
+        </div>
+
+        <!-- password alert -->
+        <div
+          class="alert alert-danger passwordErrorSign"
+          style="width: 210px; position: absolute"
+          role="alert"
+        >
+          Error! Enter a password
+        </div>
+        <div
+          class="alert alert-danger passwordErrorSign"
+          style="width: 362px; position: absolute"
+          role="alert"
+        >
+          Error! Password must contain at least 8 letters
+        </div>
+
+        <!-- confirm password -->
+        <div
+          class="alert alert-danger correctPasswordErrorOne"
+          style="width: 260px; position: absolute"
+          role="alert"
+        >
+          Error! Enter a confirm password
+        </div>
+        <div
+          class="alert alert-danger correctPasswordErrorOne"
+          style="width: 420px; position: absolute"
+          role="alert"
+        >
+          Error! Confirm password must contain at least 8 letters
+        </div>
+
+        <!-- password match -->
+        <div
+          class="alert alert-danger correctPasswordErrorTwo"
+          style="width: 263px; position: absolute"
+          role="alert"
+        >
+          Error! Password does not match
+        </div>
+
+        <div
+          class="container d-flex justify-content-center align-items-center min-vh-100"
+        >
+          <!-- signupform starts -->
+          <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <!-- Right Box -->
+            <div
+              class="col-md-6 rounded-4 right-box"
+              style="background: #494cf3"
+            >
+              <div class="row align-items-center">
+                <div class="header-text mb-4">
+                  <h3 class="heading">SIGNUP FORM</h3>
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    id="usernameSign"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    id="emailSign"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Email address"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="password"
+                    id="passwordSign"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="form-group mb-2">
+                  <input
+                    type="password"
+                    id="correctPasswordSign"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Confirm password"
+                  />
+                </div>
+                <div class="mb-3" style="color: #ffffff">
+                  Already have an account ? click here to!
+                  <a href="#" id="anchor" onclick="signLogin(event)">Login</a>
+                </div>
+                <div class="form-group mb-3">
+                  <button
+                    type="submit"
+                    class="btn btn-lg btn-light w-100"
+                    onclick="signForm(event)"
+                  >
+                    Signup
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left Box -->
+            <div
+              class="col-md-6 rounded-4 d-flex align-items-center flex-column left-box"
+            >
+              <div class="featured-image mb-3 rounded-4">
+                <img
+                  src="images/sign.jpg"
+                  class="img-fluid"
+                  style="width: 450px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

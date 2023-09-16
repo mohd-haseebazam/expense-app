@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  background: #fff;
+  color: #333;
+  font-family: Lato, sans-serif;
+  background-color: #e4e4e4;
+}
+header {
+  background-color: #494cf3;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+}
+.logoutBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logout {
+  width: 80px;
+  background-color: rgb(13 14 59);
+  letter-spacing: 1px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  margin-right: 20px;
+  padding: 10px 0;
+  border-radius: 14px;
+  cursor: pointer;
+}
+h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+.heading {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 20px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.container {
+  display: block;
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 0px 10px 10px 10px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.inputBtn {
+  display: flex;
+}
+input#inp {
+  float: left;
+  width: 85%;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+button {
+  width: 60px;
+  height: 39px;
+  background-color: #494cf3;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-left: 10px;
+  font-family: Lato, sans-serif;
+}
+.btnOne {
+  width: 100%;
+  display: flex;
+}
+
+#btn {
+  width: 104px;
+  height: 39px;
+  background-color: #494cf3;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.text ul {
+  position: relative;
+  height: 18px;
+  background-color: #494cf3;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  padding: 7px;
+  width: 98%;
+  border-radius: 6px;
+}
+text ul i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.swal-confirm-button {
+  max-width: 200px;
+  width: 50%;
+  padding: 10px 20px;
+}
+.swal-cancel-button {
+  max-width: 200px;
+  width: 50%;
+  padding: 10px 20px;
+}

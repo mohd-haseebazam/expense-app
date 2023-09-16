@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ececec;
+}
+.nameErrorSign {
+  display: none;
+}
+.emailErrorSign {
+  display: none;
+}
+.passwordErrorSign {
+  display: none;
+}
+.correctPasswordErrorOne {
+  display: none;
+}
+.correctPasswordErrorTwo {
+  display: none;
+}
+.emailErrorLogin {
+  display: none;
+}
+.passwordErrorLogin {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+.heading {
+  color: #ffffffee;
+  text-align: center;
+}
+
+/* Login Container */
+.box-area {
+  width: 930px;
+}
+.right-box {
+  padding: 40px 30px 40px 30px;
+}
+::placeholder {
+  font-size: 16px;
+}
+#anchor {
+  color: #ffffffee;
+}
+#anchorOne {
+  color: #ffffffee;
+}
+.forgot {
+  color: #ffffffee;
+}
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
