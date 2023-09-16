@@ -13,7 +13,7 @@ if (localStorage.getItem("todos")) {
   });
 }
 
-function saveTodoItems() {
+function saveToDoItems() {
   localStorage.setItem("todos", JSON.stringify(todoItems));
 }
 
@@ -29,7 +29,7 @@ function Add() {
 
     todoItems.push(todoText);
     attachDeleteListener(newEle);
-    saveTodoItems();
+    saveToDoItems();
   }
 }
 
@@ -57,7 +57,7 @@ function attachDeleteListener(element) {
         if (index !== -1) {
           todoItems.splice(index, 1);
         }
-        saveTodoItems();
+        saveToDoItems();
 
         Swal.fire("Deleted", "You todo has been deleted", "success");
       }

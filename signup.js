@@ -44,6 +44,7 @@ function loginFormSign(event) {
 
     emailElementLogin.value = "";
     passwordElementLogin.value = "";
+    window.location = "http://127.0.0.1:5500/dashboard/todo.html";
   }
 }
 function loginSign(event) {
@@ -52,9 +53,11 @@ function loginSign(event) {
   document.getElementById("loginForm").classList.add("hidden");
   document.getElementById("signUpForm").classList.remove("hidden");
   document.getElementById("signUpForm").classList.add("visible");
-
-  console.log(loginSign);
 }
+function logOut() {
+  localStorage.removeItem("login_users");
+}
+logOut();
 
 // Signupform
 
@@ -154,13 +157,14 @@ function signForm(event) {
     emailElementSign.value = "";
     passwordElementSign.value = "";
     correctPasswordElement.value = "";
+    window.location = "http://127.0.0.1:5500/signup.html";
   }
 }
+
 function signLogin(event) {
   event.preventDefault();
   document.getElementById("signUpForm").classList.remove("visible");
   document.getElementById("signUpForm").classList.add("hidden");
   document.getElementById("loginForm").classList.remove("hidden");
   document.getElementById("loginForm").classList.add("visible");
-  console.log(signLogin);
 }
